@@ -9,3 +9,14 @@ C:\Users\DimaB\source\repos\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.exe
 C:\Users\DimaB\source\repos\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.pdb
 C:\Users\DimaB\source\repos\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.exe
 C:\Users\DimaB\source\repos\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.pdb
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.exe.config
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.exe
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.pdb
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.AssemblyReference.cache
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.SuggestedBindingRedirects.cache
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\Calculator.Form1.resources
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c____.Properties.Resources.resources
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.GenerateResource.cache
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.CoreCompileInputs.cache
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.exe
+C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.pdb
