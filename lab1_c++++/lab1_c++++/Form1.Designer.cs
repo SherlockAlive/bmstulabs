@@ -100,9 +100,9 @@
             // clear_btn
             // 
             this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_btn.Location = new System.Drawing.Point(226, 2);
+            this.clear_btn.Location = new System.Drawing.Point(225, 2);
             this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(32, 40);
+            this.clear_btn.Size = new System.Drawing.Size(62, 34);
             this.clear_btn.TabIndex = 9;
             this.clear_btn.Text = "C";
             this.clear_btn.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             this.equal_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.equal_btn.Location = new System.Drawing.Point(226, 175);
             this.equal_btn.Name = "equal_btn";
-            this.equal_btn.Size = new System.Drawing.Size(32, 95);
+            this.equal_btn.Size = new System.Drawing.Size(61, 95);
             this.equal_btn.TabIndex = 19;
             this.equal_btn.Text = "=";
             this.equal_btn.UseVisualStyleBackColor = true;
@@ -247,7 +247,7 @@
             this.textBox_Result.Location = new System.Drawing.Point(22, 40);
             this.textBox_Result.Name = "textBox_Result";
             this.textBox_Result.ReadOnly = true;
-            this.textBox_Result.Size = new System.Drawing.Size(236, 34);
+            this.textBox_Result.Size = new System.Drawing.Size(265, 34);
             this.textBox_Result.TabIndex = 20;
             this.textBox_Result.Text = "0";
             this.textBox_Result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -285,7 +285,7 @@
             this.button10.TabIndex = 23;
             this.button10.Text = "MS";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.button_ms_Click);
             // 
             // button18
             // 
@@ -297,25 +297,25 @@
             this.button18.TabIndex = 24;
             this.button18.Text = "MC";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.Click += new System.EventHandler(this.button_mc_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(226, 73);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 96);
+            this.button4.Size = new System.Drawing.Size(61, 96);
             this.button4.TabIndex = 25;
             this.button4.Text = "+/-";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button_plus_minus_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(263, 293);
+            this.ClientSize = new System.Drawing.Size(291, 293);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button10);

@@ -25,9 +25,7 @@ namespace Calculator
             Button button = (Button)sender;
             if (((textBox_Result.Text == "0") || (isOperationPerformed)) && (button.Text != ","))
                 textBox_Result.Clear();
-
             isOperationPerformed = false;
- //           Button button = (Button)sender;
             if (button.Text == ",")
             {
                 if (!textBox_Result.Text.Contains(","))
@@ -36,32 +34,23 @@ namespace Calculator
             }
             else
                 textBox_Result.Text = textBox_Result.Text + button.Text;
-
-
         }
 
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            string potentionalDot = Convert.ToString(textBox_Result.Text.ElementAt(textBox_Result.Text.Length - 1));
-            if (potentionalDot == ",")
-                MessageBox.Show($"Операция невозможна, если на конце числа стоит точка", "Информация");
+            if (resultValue != 0)
+            {
+                operationPerformed = button.Text;
+                labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+                isOperationPerformed = true;
+            }
             else
             {
-                if (resultValue != 0)
-                {
- //                   equal_btn.PerformClick();
-                    operationPerformed = button.Text;
-                    labelCurrentOperation.Text = resultValue + " " + operationPerformed;
-                    isOperationPerformed = true;
-                }
-                else
-                {
-                    operationPerformed = button.Text;
-                    resultValue = Double.Parse(textBox_Result.Text);
-                    labelCurrentOperation.Text = resultValue + " " + operationPerformed;
-                    isOperationPerformed = true;
-                }
+                operationPerformed = button.Text;
+                resultValue = Double.Parse(textBox_Result.Text);
+                labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+                isOperationPerformed = true;
             }
         }
         private void clear_btn_Click(object sender, EventArgs e)
@@ -74,7 +63,6 @@ namespace Calculator
         private void equal_btn_Click(object sender, EventArgs e)
         {
             double secondNum = Double.Parse(textBox_Result.Text);
-            double savedNum = secondNum;
             switch (operationPerformed)
             {
                 case "+":
@@ -102,9 +90,6 @@ namespace Calculator
 
         private void sqrt_Click(object sender, EventArgs e)
         {
-            string potentionalDot = Convert.ToString(textBox_Result.Text.ElementAt(textBox_Result.Text.Length - 1));
- //           if (potentionalDot == ",")
- //               MessageBox.Show($"Операция невозможна, если на конце числа стоит точка", "Информация");
             resultValue = Convert.ToDouble(textBox_Result.Text);
             if (resultValue < 0)
                 MessageBox.Show("Корень из отрицательного числа запрещен!", "Информация");
@@ -112,22 +97,26 @@ namespace Calculator
                 textBox_Result.Text = Convert.ToString(Math.Sqrt(resultValue));
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button_ms_Click(object sender, EventArgs e)
         {
             if (textBox_Result.Text != "")
                 memorySave = Double.Parse(textBox_Result.Text);
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void button_mc_Click(object sender, EventArgs e)
         {
             if (memorySave != 0)
                 textBox_Result.Text = memorySave.ToString();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_plus_minus_Click(object sender, EventArgs e)
         {
             string potentionalDot = Convert.ToString(textBox_Result.Text.ElementAt(textBox_Result.Text.Length - 1));
-            if (potentionalDot == ",")
+            if (textBox_Result.Text == "0")
+                textBox_Result.Text = "-0";
+            else if (textBox_Result.Text == "0,")
+                textBox_Result.Text = "-0,";
+            else if (potentionalDot == ",")
                 textBox_Result.Text = (Double.Parse(textBox_Result.Text) * -1).ToString() + ",";
             else
                 textBox_Result.Text = (Double.Parse(textBox_Result.Text) * -1).ToString();
