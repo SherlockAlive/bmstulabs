@@ -20,3 +20,13 @@ C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++
 C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.CoreCompileInputs.cache
 C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.exe
 C:\Users\DimaB\source\repos\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.pdb
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.exe.config
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.exe
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\bin\Debug\lab1_c++++.pdb
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.AssemblyReference.cache
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\Calculator.Form1.resources
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c____.Properties.Resources.resources
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.GenerateResource.cache
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.csproj.CoreCompileInputs.cache
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.exe
+D:\ForBMSTU\help\bmstulabs\lab1_c++++\lab1_c++++\obj\Debug\lab1_c++++.pdb

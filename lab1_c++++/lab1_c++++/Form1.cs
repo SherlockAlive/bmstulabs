@@ -11,10 +11,14 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        Double resultValue = 0;
+        double resultValue = 0;
         double memorySave = 0;
-        String operationPerformed = "";
+        double onDisplay = 0;
+        string operationPerformed = "";
         bool isOperationPerformed = false;
+
+        private BLogic _bl = new BLogic();
+
         public Form1()
         {
             InitializeComponent();
@@ -57,54 +61,49 @@ namespace Calculator
         {
             textBox_Result.Text = "0";
             resultValue = 0;
+            memorySave = 0;
+            onDisplay = 0;
+            operationPerformed = "";
+            isOperationPerformed = false;
             equal_btn.Enabled = true;
         }
 
         private void equal_btn_Click(object sender, EventArgs e)
         {
-            double secondNum = Double.Parse(textBox_Result.Text);
-            switch (operationPerformed)
-            {
-                case "+":
-                    textBox_Result.Text = ((resultValue + secondNum).ToString());
-                    break;
-                case "-":
-                    textBox_Result.Text = ((resultValue - secondNum).ToString());
-                    break;
-                case "*":
-                    textBox_Result.Text = ((resultValue * secondNum).ToString());
-                    break;
-                case "/":
-                        if (secondNum == 0) 
-                                MessageBox.Show($"Деление на ноль запрещено!", "Информация");
-                        else
-                            textBox_Result.Text = ((resultValue / secondNum).ToString());
-                    break;
-            }
-            resultValue = Double.Parse(textBox_Result.Text);
+            onDisplay = Double.Parse(textBox_Result.Text);
+            resultValue = setupBLogicAndStart();
+            textBox_Result.Text = resultValue.ToString();
             labelCurrentOperation.Text = "";
             equal_btn.Enabled = false;
- //           MessageBox.Show($"Операция выполнена успешно, для повторных вычислений перезапустите калькулятор, нажав С", "Информация");
+            //MessageBox.Show($"Операция выполнена успешно, для повторных вычислений перезапустите калькулятор, нажав С", "Информация");
 
         }
 
         private void sqrt_Click(object sender, EventArgs e)
         {
-            resultValue = Convert.ToDouble(textBox_Result.Text);
-            if (resultValue < 0)
-                MessageBox.Show("Корень из отрицательного числа запрещен!", "Информация");
-            else
-                textBox_Result.Text = Convert.ToString(Math.Sqrt(resultValue));
+            operationPerformed = "sqrt";
+            onDisplay = Convert.ToDouble(textBox_Result.Text);
+            //тут ошибку если что надо будеит вывести
+            resultValue = setupBLogicAndStart();
+            textBox_Result.Text = resultValue.ToString();
+
+            //resultValue = Convert.ToDouble(textBox_Result.Text);
+            //if (resultValue < 0)
+            //    MessageBox.Show("Корень из отрицательного числа запрещен!", "Информация");
+            //else
+            //    textBox_Result.Text = Convert.ToString(Math.Sqrt(resultValue));
         }
 
         private void button_ms_Click(object sender, EventArgs e)
         {
+            //Как оно работает
             if (textBox_Result.Text != "")
                 memorySave = Double.Parse(textBox_Result.Text);
         }
 
         private void button_mc_Click(object sender, EventArgs e)
         {
+            //как оно работает
             if (memorySave != 0)
                 textBox_Result.Text = memorySave.ToString();
         }
@@ -120,6 +119,15 @@ namespace Calculator
                 textBox_Result.Text = (Double.Parse(textBox_Result.Text) * -1).ToString() + ",";
             else
                 textBox_Result.Text = (Double.Parse(textBox_Result.Text) * -1).ToString();
+        }
+
+        private double setupBLogicAndStart()
+        {
+            _bl.Number = onDisplay;
+            _bl.Summary = resultValue;
+            _bl.Operation = operationPerformed;
+
+            return _bl.SetupAndStartBLogic();
         }
     }
 }
